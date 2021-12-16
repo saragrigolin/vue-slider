@@ -46,7 +46,7 @@ const app = new Vue (
                 }, 3000);
             }
         },
-        created: function () {
+        created() {
             this.play();
         }
     }
