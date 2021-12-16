@@ -19,7 +19,16 @@ const app = new Vue (
                 'image2.jpg',
                 'image3.jpg',
                 'image4.jpg'
-            ]
+            ],
+            counter: 0
+        },
+        methods: {
+            nextImg: function(){
+                this.counter += 1;
+            },
+            prevImg: function(){
+                this.counter -= 1;
+            }
         }
     }
 )
