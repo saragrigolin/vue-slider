@@ -10,10 +10,11 @@ Leggete sempre la documentazione, partite dalle cose basilari per poi aggiungere
 Ricordiamo sempre che è necessario capire bene prima che dati dobbiamo andare a manipolare.
 */
 
+//utilizzo VueJS
 const app = new Vue (
     {
-        el: '#app',
-        data: {
+        el: '#app', //dichiaro l'elemento da usare
+        data: { //dichiaro i dati
             images: [
                 'image1.jpg',
                 'image2.jpg',
@@ -22,14 +23,14 @@ const app = new Vue (
             ],
             counter: 0
         },
-        methods: {
-            nextImg: function(){
+        methods: { //funzioni
+            nextImg: function(){ //funzione per andare avanti
                 this.counter += 1;
                 if (this.counter > this.images.length - 1) {
                     this.counter = 0;
                 }
             },
-            prevImg: function(){
+            prevImg: function(){ //funzione per tornare indietro
                 this.counter -= 1;
                 if (this.counter < 0) {
                     this.counter = this.images.length - 1;
