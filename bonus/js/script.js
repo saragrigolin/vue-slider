@@ -22,7 +22,7 @@ const app = new Vue (
                 'image3.jpg',
                 'image4.jpg'
             ],
-            counter: 0
+            counter: 0,
         },
         methods: { //funzioni
             nextImg: function(){ //funzione per andare avanti
@@ -39,7 +39,15 @@ const app = new Vue (
             },
             dotClick: function(index){ //funzione per rendere cliccabili i pallini
                 this.counter = index;
+            },
+            play: function(){ //funzione per l'autoplay
+                this.timer = setInterval(() => {
+                    this.nextImg();
+                }, 3000);
             }
+        },
+        created: function () {
+            this.play();
         }
     }
 )
