@@ -44,6 +44,10 @@ const app = new Vue (
                 this.timer = setInterval(() => {
                     this.nextImg();
                 }, 3000);
+            },
+            stop: function(){
+                clearTimeout(this.timer);
+
             }
         },
         created() {
