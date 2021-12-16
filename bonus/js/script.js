@@ -1,6 +1,7 @@
 /*
 Descrizione:
 Partendo dal markup allegato, rifare lo slider ma questa volta usando Vue.
+
 Bonus:
 1- al click su uno dei pallini mostrare l’immagine in posizione corrispondente
 2- applicare l’autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
@@ -35,6 +36,9 @@ const app = new Vue (
                 if (this.counter < 0) {
                     this.counter = this.images.length - 1;
                 }
+            },
+            dotClick: function(index){ //funzione per rendere cliccabili i pallini
+                this.counter = index;
             }
         }
     }
